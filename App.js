@@ -1,10 +1,11 @@
 import * as React from "react";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, MaterialCommunityIcons  }from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Home from "./Pages/Home";
 import Settings from "./Pages/Settings";
+import Tickets from "./Pages/Tickets";
 
 const Tab = createBottomTabNavigator();
 
@@ -35,6 +36,14 @@ export default function App() {
                   color={color}
                 />
               );
+            } else if (route.name === "Tickets") {
+              return (
+                <MaterialCommunityIcons 
+                  name={focused ? "ticket-percent" : "ticket-percent-outline"}
+                  size={size}
+                  color={color}
+                />
+              );
             }
           },
           tabBarInactiveTintColor: "gray",
@@ -43,6 +52,7 @@ export default function App() {
       >
 
         <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Tickets" component={Tickets} />
         <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>
