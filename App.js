@@ -2,9 +2,14 @@ import * as React from "react";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import ProfileScreen from './Component/Profile/UserProfile';
+import Profile from "./Component/SettingOptions/General/Profile";
+import Wallet from "./Component/SettingOptions/General/Wallet";
+import Rewards from "./Component/SettingOptions/General/Rewards";
+import TermsConditions from "./Component/SettingOptions/Others/TermsConditions";
+import PrivacyPolicy from "./Component/SettingOptions/Others/PrivacyPolicy";
+import ContactUs from "./Component/SettingOptions/Others/ContactUs";
 
 import Home from "./Pages/Home";
 import Settings from "./Pages/Settings";
@@ -63,8 +68,17 @@ export default function App() {
   return (
     <NavigationContainer>
       <RootStack.Navigator>
-        <RootStack.Screen name="MyTabs" component={MyTabs} options={{ headerShown: false }} />
-        <RootStack.Screen name="Profile" component={ProfileScreen} />
+        <RootStack.Screen
+          name="MyTabs"
+          component={MyTabs}
+          options={{ headerShown: false }}
+        />
+        <RootStack.Screen name="Profile" component={Profile} />
+        <RootStack.Screen name="Wallet" component={Wallet} />
+        <RootStack.Screen name="Rewards" component={Rewards} />
+        <RootStack.Screen name="Terms and Conditions" component={TermsConditions} />
+        <RootStack.Screen name="Privacy Policy" component={PrivacyPolicy} />
+        <RootStack.Screen name="Contact Us" component={ContactUs} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

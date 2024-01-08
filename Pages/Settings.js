@@ -22,7 +22,6 @@ const SettingScreen = ({ navigation }) => {
               }}
               onPress={() => navigation.navigate("Profile")}
             />
-            {/* <Button title="Go back" onPress={() => navigation.goBack()} /> */}
           </View>
           <View style={styles.navlink}>
             <NavigateRow
@@ -31,6 +30,7 @@ const SettingScreen = ({ navigation }) => {
                 name: "account-balance-wallet",
                 type: "FontAwesome",
               }}
+              onPress={() => navigation.navigate("Wallet")}
             />
           </View>
           <View style={styles.navlink}>
@@ -40,6 +40,7 @@ const SettingScreen = ({ navigation }) => {
                 name: "wallet-giftcard",
                 type: "MaterialCommunityIcons",
               }}
+              onPress={() => navigation.navigate("Rewards")}
             />
           </View>
         </SectionRow>
@@ -55,6 +56,7 @@ const SettingScreen = ({ navigation }) => {
                 name: "file-document",
                 type: "material-community",
               }}
+              onPress={() => navigation.navigate("Terms and Conditions")}
             />
           </View>
           <View style={styles.navlink}>
@@ -64,6 +66,7 @@ const SettingScreen = ({ navigation }) => {
                 name: "folder-lock",
                 type: "material-community",
               }}
+              onPress={() => navigation.navigate("Privacy Policy")}
             />
           </View>
           <View style={styles.navlink}>
@@ -73,6 +76,7 @@ const SettingScreen = ({ navigation }) => {
                 name: "users",
                 type: "font-awesome",
               }}
+              onPress={() => navigation.navigate("Contact Us")}
             />
           </View>
           <View style={styles.navlink}>
