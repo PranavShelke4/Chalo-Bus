@@ -76,7 +76,10 @@ export default function App() {
         <RootStack.Screen name="Profile" component={Profile} />
         <RootStack.Screen name="Wallet" component={Wallet} />
         <RootStack.Screen name="Rewards" component={Rewards} />
-        <RootStack.Screen name="Terms and Conditions" component={TermsConditions} />
+        <RootStack.Screen
+          name="Terms and Conditions"
+          component={TermsConditions}
+        />
         <RootStack.Screen name="Privacy Policy" component={PrivacyPolicy} />
         <RootStack.Screen name="Contact Us" component={ContactUs} />
       </RootStack.Navigator>
