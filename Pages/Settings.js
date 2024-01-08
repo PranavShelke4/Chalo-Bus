@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import * as React from 'react';
+import { StyleSheet, Text, View, Button } from "react-native";
 import {
   SectionRow,
   SettingsPage,
@@ -22,6 +22,7 @@ const SettingScreen = ({ navigation }) => {
               }}
               onPress={() => navigation.navigate("Profile")}
             />
+            {/* <Button title="Go back" onPress={() => navigation.goBack()} /> */}
           </View>
           <View style={styles.navlink}>
             <NavigateRow
